@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>String 객체 사용하기</h3><hr>
+    <script>
+        var a=new String("Boys and Girls");
+        var b="!!";
+        //문자열 - 문자(한개의 단어)
+        document.writeln(a.charAt(0)+"<br>"); //문자열의 해당 인덱스의 문자를 출력
+        //concat메소드는 가변인수 선언
+        document.writeln(a.concat(b,"입니다요.")+"<br>"); 
+        document.writeln(a.concat(b)); 
+        document.writeln(a.concat(b,"a","bb","cc")+"<br>"); 
+        document.writeln(a.indexOf('s')+"<br>"); //'s'의 위치값을 불러옴
+        document.writeln(a.lastIndexOf('s')+"<br>"); //뒤 's'의 위치값을 불러옴
+        document.writeln(a.indexOf('and')+"<br>"); //'and'의 위치값을 불러옴
+        document.writeln(a.indexOf('And')+"<br>"); //대문자 구분함
+        document.writeln(a.slice(5,8)+"<br>"); //인덱스 5부터 8까지의 문자 출력
+        document.writeln(a.toUpperCase()+"<br>"); // 대문자로
+        document.writeln(a.replace('and','or')+"<br>"); //and 문자열을 or로 변경
+        document.writeln("    simba    ".trim()+"<br>"); //.trim 앞뒤의 공백 제거
+        var sub=a.split(" ");//빈칸을 구분자로 분리
+        for(i=0;i<sub.length;i++)
+        document.writeln(sub[i]+"<br>")
+
+        var s="https://news.naver.com/main/read.nhn?mode=LSD&mid=shm&sid1=102&oid=421&aid=0004515570"
+        document.writeln(s);
+        document.writeln("<hr>");
+        var len=s.indexOf('?');
+        var s1=s.slice(len+1);
+        //document.writeln(s1);
+        var s2=s1.split('&');
+        for(i=0;i<s2.length;i++){
+            var s3=s2[i].split('=');
+        document.writeln(s2[i]+"<br>");
+        }
+        document.writeln("<hr>")
+        for(i=0;i<s2.length;i++){
+            //var s3=s2[i].split('=');
+        document.writeln(s2[i].split('=')[1]+"<br>");
+        }
+        //? 모르겟음....
+        /*
+            mode
+            mid
+            sid1
+            oid...
+            ---------------
+            LSD
+            shm
+            102
+            102.....
+        */
+    </script>
+</body>
+</html>

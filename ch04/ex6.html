@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 상세</title>
+    <style>
+        h3,li{
+            color: brown;
+        } /* 중복 스타일 적용*/
+        ul strong{
+            color: dodgerblue;
+        }/* 자손 관계 태그 스타일 적용*/
+        div>div>strong{
+        background: yellow;
+        }/*자식 관계 태그 스타일 적용*/
+        body.main{
+            background: aliceblue;
+        }/*클래스가 지정된 태그 스타일 적용 (.사용)*/
+        #list{
+            background: mistyrose;
+        }/*아이디가 지정된 태그 스타일 적용 (#사용)*/
+        #list span{
+            color: forestgreen;
+        }/*아이디가 지정된 태그의 자손관계 태그 스타일 적용*/
+        .warning{
+            color: red;
+        }/*클래스 .으로 시작해도 됨*/
+        h3:first-letter{
+            color: red;
+        }/*가상의 클래스를 지정하여 스타일 적용 (h3의 첫번째 문자 W만 스타일 적용됨)*/
+        li:hover{
+            background: yellowgreen;
+        }/*마우스가 올라가면 색깔 바뀜(:hover) (:active-마우스로 누르고 있는 상황에서 스타일 적용)*/
+    </style>
+</head>
+<body class="main">
+    <h3>Web Programming</h3>
+    <hr>
+    <div> 
+        <div>2학기 <strong>학습 내용</strong>입니다.</div>
+        <ul id="list">
+             <li><span>HTML5</span></li>
+            <li><strong>CSS</strong></li>
+            <li>JAVASCRIPT</li>
+        </ul>
+        <div class="warning">60점 이하는 F</div>
+    </div>
+</body>
+</html>

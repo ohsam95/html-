@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function check(){
+            alert("보이나요?");
+            f=document.frm;
+            if(f.id.value=""){
+                alert("아이디를 입력하세요");
+                return;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>로그인 폼</h3>
+    <form name="frm" method="" action="">
+        <!--name은 함수지정을 위해 꼭 들어가야함--> 
+        <!--action은 서버에게 어떤페이지에 요청하는지-->
+        <!--method get(디폴트 됨)- 가져오는 것 검색창에 사용하면 좋음
+            /post-내보내는 것 로그인에 사용하면 좋음-->
+        ID: <input type="text" size="15" name="id" value=""><br>
+        <!--type속성이 text일때 생략가능-->
+        PWD: <input type="password" size="15" name="pwd" value=""><br>
+        <input type="submit" value="로그인" onclick="check()">
+    </form>
+</body>
+</html>
